@@ -25,7 +25,8 @@ module cla_multiplier_tb();
  // multicand = 16'd0;
  // multiplier = 8'd0;
  // end 
-// fpga4student.com FPGA projects, Verilog projects, VHDL projects  integer i;
+// fpga4student.com FPGA projects, Verilog projects, VHDL projects  
+ integer i;
  initial begin
  for (i = 0; i < 30; i = i + 1) begin: W
   #(`DELAY) multicand = multicand + 1; multiplier = multiplier + 1;
