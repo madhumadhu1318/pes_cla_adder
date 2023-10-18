@@ -26,7 +26,7 @@ A carry look-ahead adder reduces the propagation delay by introducing more compl
 
 
 # Simulation
-iverilog pes_bcdbin.v pes_bcdbin_tb.v
+iverilog CLA_4bit.v  Test_CLA_4bit.v
 
 ./a.out
 
