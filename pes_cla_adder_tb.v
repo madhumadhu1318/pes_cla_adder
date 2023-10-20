@@ -37,5 +37,12 @@ module Test_CLA_4bit;
  
     initial begin
  $monitor("time=",$time,, "A=%b B=%b Cin=%b : Sum=%b Cout=%b PG=%b GG=%b",A,B,Cin,S,Cout,PG,GG);
-    end      
+    end  
+  initial begin
+    $dumpfile("Test_CLA_4bit.vcd");
+    $dumpvars(0, Test_CLA_4bit);
+    //$monitor($time, ": %b + %b = %b, %b", in0, in1, out, cout);
+end
+
 endmodule
+
