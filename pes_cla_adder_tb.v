@@ -1,4 +1,4 @@
-module Test_CLA_4bit;
+module pes_cla_adder_tb;
     // Inputs
     reg [3:0] A;
     reg [3:0] B;
@@ -11,7 +11,7 @@ module Test_CLA_4bit;
     wire GG;
 
     // Instantiate the Unit Under Test (UUT)
-    CLA_4bit uut (
+    pes_cla_adder uut (
     .S(S), 
     .Cout(Cout), 
     .PG(PG), 
@@ -39,10 +39,9 @@ module Test_CLA_4bit;
  $monitor("time=",$time,, "A=%b B=%b Cin=%b : Sum=%b Cout=%b PG=%b GG=%b",A,B,Cin,S,Cout,PG,GG);
     end  
   initial begin
-    $dumpfile("Test_CLA_4bit.vcd");
-    $dumpvars(0, Test_CLA_4bit);
+    $dumpfile("pes_cla_adder_tb.vcd");
+    $dumpvars(0, pes_cla_adder_tb);
     //$monitor($time, ": %b + %b = %b, %b", in0, in1, out, cout);
 end
 
 endmodule
-
