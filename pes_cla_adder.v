@@ -1,4 +1,4 @@
-module CLA_4bit(
+module pes_cla_adder(
     output [3:0] S,
     output Cout,PG,GG,
     input [3:0] A,B,
