@@ -38,6 +38,7 @@ https://github.com/madhumadhu1318/PES_ASIC_CLASS
 
 ![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/20718a67-df59-45d1-9e30-493ca9152fe9)
 
+![waveform final](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/93776755-c2e8-472a-ab5f-4ac94c656466)
 
 
 
@@ -50,6 +51,13 @@ https://github.com/madhumadhu1318/PES_ASIC_CLASS
 + `flatten`
 + `write_verilog pes_cla_adder_netlist.v`
 + `show pes_cla_adder`
+
+
+
+
+![yosys1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/bdfe1e2f-f7e8-4bec-a76f-5f0ddca74357)
+
+
 
 
 
