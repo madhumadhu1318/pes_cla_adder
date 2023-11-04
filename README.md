@@ -323,7 +323,6 @@ run_synthesis
 ![1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/e05e68fe-43a3-496d-9f1f-641791cd5e94)
 ![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/4e2d721c-eafa-4728-9353-035d99a8cf89)
 ![3](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/bf68593e-065b-4133-9545-db068a0c41e4)
-![4](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/76f8313e-c870-4919-9af8-2006933d0ecc)
 ![5](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/90e2c9d0-05fb-45ec-8ef7-817c702d8560)
 
 
