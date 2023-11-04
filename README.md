@@ -266,7 +266,7 @@ make test
    1. **Magic** - Magic is primarily a layout tool used for creating and editing IC layouts, and it is often used for digital CMOS design.
    2. **KLayout** - KLayout is primarily used for viewing, editing, and analyzing IC layouts but is not a layout creation tool like Magic.
    
-8) **Checks**
+7) **Checks**
    1. **CVC** - CVC is a tool primarily used for verification and debugging of digital designs.
    2. **Netgen** - Netgen is an open-source digital netlist comparison and LVS (Layout vs. Schematic) tool.
 
@@ -277,15 +277,16 @@ make test
 <summary>Creating folder and adding files</summary>
 <br>
 
-Create a new folder within OpenLane with the same name as your design file `pes_binary_to_gray_converter`.
+Create a new folder within OpenLane with the same name as your design file `pes_cla_adder`.
 
-Note `pes_binary_to_gray_converter` folder should have [config.json](https://github.com/Pavan2280/pes_binary_to_gray/blob/main/config.json), `pes_binary_to_gray_converter.v` and the `src` folder.
+Note `pes_cla_adder` folder should have [config.json](https://github.com/madhumadhu1318/pes_cla_adder/blob/main/config.json), `pes_cla_adder.v` and the `src` folder.
 
-Make sure `src` folder should have these [Files](https://github.com/Pavan2280/pes_binary_to_gray/tree/main/src)
+Make sure `src` folder should have these 
 
-The `pdks` folder must have this [File](https://github.com/Pavan2280/pes_binary_to_gray/blob/main/sky130_fd_sc_hd.v)
+The `pdks` folder must have this [File](https://github.com/madhumadhu1318/pes_cla_adder/blob/main/sky130_fd_sc_hd.v)
 
-![Screenshot from 2023-10-31 21-30-11](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/98f84586-8ac3-4e9c-afeb-583c57c075c0)
+![Screenshot 2023-11-04 163829](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/e3fe8e44-d3cf-4ec5-a9ee-81a796cebd89)
+
 
 [Back to Stage-2](#Stage-2)
 </details>
@@ -300,9 +301,11 @@ cd OpenLane/
 make mount 
 ./flow.tcl -interactive
 package require openlane 0.9
-prep -design pes_binary_to_gray_converter
+prep -design pes_cla_adder
 ```
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/d834210a-c527-4a73-85e2-937b7d7ffdf0)
+![0 001](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/128e3204-49b9-4f42-ba29-e22151ddafd1)
+
+
 
 [Back to Stage-2](#Stage-2)
 </details>
@@ -316,15 +319,23 @@ prep -design pes_binary_to_gray_converter
 ```
 run_synthesis
 ```
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/f00db54b-1364-4534-be3d-49a99b4e1787)
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/ea8c0ff0-879a-4b7e-a0e9-a117631c9ec2)
+![0 1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/43aad3aa-2f65-4cfe-9f79-5b345bedca31)
+![1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/e05e68fe-43a3-496d-9f1f-641791cd5e94)
+![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/4e2d721c-eafa-4728-9353-035d99a8cf89)
+![3](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/bf68593e-065b-4133-9545-db068a0c41e4)
+![4](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/76f8313e-c870-4919-9af8-2006933d0ecc)
+![5](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/90e2c9d0-05fb-45ec-8ef7-817c702d8560)
+
+
+
 
 **Floorplan**
 + Command to exectue
 ```
 run_floorplan
 ```
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/e7192afb-3c6e-49a3-b675-6a763883d5f1)
+![0 1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/bc00abd2-849f-474a-8a6d-4e82b97ed7e2)
+
 
 **Note we need to use libs.tech file so we need to gitclone this https://github.com/hwiiiii/sky130A into pdks folder**
 ```
@@ -335,84 +346,66 @@ git clone https://github.com/hwiiiii/sky130A
 magic -T /home/pavanstalegaon/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_binary_to_gray_converter.def &
 ```
 
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/2e13e098-36ee-4237-b77f-f86d0330b965)
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/80d19995-0338-4577-b98d-402cff16c955)
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/27b8b2dc-2933-4e68-9919-5b9895a9fe86)
+![1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/7f59908a-f564-486e-8e07-70a018d131b8)
+![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/04760473-f635-4c13-97a5-247d77cd2cf4)
+![3](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/dde636b4-f62f-4a5a-8e93-5cab4a8c90ca)
+
 
 **Placement**
 + Command to exectue
 ```
 run_placement
 ```
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/77dc5322-9815-452f-abd3-9a84d73fe1e2)
+![1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/d72f9b99-b275-4842-908c-018f75cd7ab1)
+
 
 ```
 magic -T /home/pavanstalegaon/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_binary_to_gray_converter.def &
 ```
 
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/79866612-19bf-49ed-8873-555fbd5c282e)
+![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/699e6bf8-7d5f-4b5a-8af9-2bbb3e09b0e6)
+
 
 **CTS**
 + Command to exectue
 ```
 run_cts
 ```
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/0f5f9ab2-d8f4-480f-afc3-a0dff3fed912)
+![1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/eba23bde-dc04-426d-992c-09cd50efbbda)
+
 
 **These reports generated are given below , after executing run_cts command**
 
-![WhatsApp Image 2023-11-03 at 18 45 54_26baa361](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/de120007-2765-49a1-83c1-e188e784460d)
-
-![WhatsApp Image 2023-11-03 at 18 45 55_db237259](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/4ca78b94-4070-4a14-800c-80afe1563e4c)
-
-![WhatsApp Image 2023-11-03 at 18 45 55_f26bce5c](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/d2e83b70-4015-494d-b0e3-3fa22884fb61)
-
-![WhatsApp Image 2023-11-03 at 18 45 55_e586ad61](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/34d9d341-e4b8-464f-b4a5-1ba37bf40674)
-
-![WhatsApp Image 2023-11-03 at 18 45 56_96e020b8](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/483fa9f7-754a-41b1-8bce-1d588b4f5fb7)
-
-![WhatsApp Image 2023-11-03 at 18 45 56_4c8b1dce](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/8083ed33-59d9-4c0c-8b27-fae5f7652061)
-
-![WhatsApp Image 2023-11-03 at 18 45 56_a7f194f7](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/805faf92-eb03-43cf-93c3-d3022d94cec1)
-
-![WhatsApp Image 2023-11-03 at 18 45 57_a033e87e](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/061941d1-bb0f-4918-af78-dd110656717d)
+![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/0ea355f5-c806-4f5c-a277-96f792be9c52)
+![3](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/a928190d-1ff0-4b8b-8896-692a689b0a52)
+![4](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/94c16ed9-8ab0-4401-ab3b-7da50bc93f21)
+![5](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/08517ba2-78c0-480c-90f1-63e37b25961c)
+![6](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/6ca0542e-4292-46c9-a8ce-f033b4f0b1a7)
+![7](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/fb281634-820e-4b6b-9a90-00a873ec2fe3)
+![8](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/4ec3ea05-d316-4038-b148-f96d2f998e79)
+![9](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/3171e245-274b-4c27-8f68-d795423ba1a9)
 
 **Routing**
 + Command to exectue
 ```
 run_routing
 ```
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/65a665bf-d5ac-4d53-b207-1e2b5ef1c278)
+![1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/d31a1a6c-9e4c-4c70-aa41-a37b80e38c2c)
+
 
 ```
 magic -T /home/pavanstalegaon/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_binary_to_gray_converter.def &
 ```
 
-![image](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/38a61ce2-30f4-4ab2-b970-b2cb9496a32e)
+![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/5e0dbc4e-b355-48dc-b2e6-3a20b5533cde)
+![3](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/9b706289-1e7e-47da-bdfc-4ee088c3bf3d)
 
-**These reports generated are given below , after executing run_routing command**
-
-![WhatsApp Image 2023-11-03 at 18 07 23_0c24b3ce](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/b3adcca1-6916-42cf-b54d-311a0df3aa53)
-
-![WhatsApp Image 2023-11-03 at 18 07 55_6d2c2127](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/ed50e830-5873-4f60-ab9b-d7e572856087)
-
-![WhatsApp Image 2023-11-03 at 18 08 03_a453f791](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/ed55bf13-f553-4d13-ba35-d4c52a996e26)
-
-![WhatsApp Image 2023-11-03 at 18 08 17_1775bd3d](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/26a7ee4c-dcf9-4463-8388-6264eef46cb0)
-
-![WhatsApp Image 2023-11-03 at 18 10 53_57884b22](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/276452bd-3bda-481e-8a94-e6c8da972785)
-
-![WhatsApp Image 2023-11-03 at 18 12 26_768d16e9](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/d104783c-0dc9-4064-ac68-9e45214fb9d7)
-
-![WhatsApp Image 2023-11-03 at 18 12 37_b8e2f46b](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/9b4a4a07-95ee-4e13-9305-7538afffebd4)
-
-![WhatsApp Image 2023-11-03 at 18 12 58_294b5666](https://github.com/Pavan2280/pes_binary_to_gray/assets/131603225/f369388f-dafa-4c67-946c-17a5a8739d29)
 
 #### Statistics
-- Internal Power = 1.39e-04 W
-- Switching Power = 3.00e-05
-- Leakage Power = 3.35e-10
-- Total Power = 1.69e-04
+- Internal Power = 7.12e-06 W  [43.4%]
+- Switching Power = 9.27e-06 W [56.6%]
+- Leakage Power = 5.90e-10  W  [0.0%]
+- Total Power = 1.64e-10 W     [100%]
 
 [Back to Stage-2](#Stage-2)
 </details>
