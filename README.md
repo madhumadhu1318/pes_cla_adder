@@ -342,7 +342,7 @@ git clone https://github.com/hwiiiii/sky130A
 ```
 
 ```
-magic -T /home/pavanstalegaon/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_binary_to_gray_converter.def &
+magic -T /home/madhulakshman/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_cla_adder.def &
 ```
 
 ![1](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/7f59908a-f564-486e-8e07-70a018d131b8)
@@ -359,7 +359,7 @@ run_placement
 
 
 ```
-magic -T /home/pavanstalegaon/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_binary_to_gray_converter.def &
+magic -T /home/madhulakshman/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_cla_adder.def &
 ```
 
 ![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/699e6bf8-7d5f-4b5a-8af9-2bbb3e09b0e6)
@@ -393,7 +393,7 @@ run_routing
 
 
 ```
-magic -T /home/pavanstalegaon/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_binary_to_gray_converter.def &
+magic -T /home/madhulakshman/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_cla_adder.def &
 ```
 
 ![2](https://github.com/madhumadhu1318/pes_cla_adder/assets/90201844/5e0dbc4e-b355-48dc-b2e6-3a20b5533cde)
